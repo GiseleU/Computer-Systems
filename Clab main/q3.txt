@@ -1,0 +1,73 @@
+Authors: Hannah Guo and Gisele Umutoni
+    
+                                        PART A
+
+1.  When you type c, it prints " Program received signal SIGSEGV, Segmentation fault.
+    0x00007ffff7a5c26a in ____strtoll_l_internal () from /lib64/libc.so.6"
+
+2. "bt" gives "#0  0x00007ffff7a5c26a in ____strtoll_l_internal () from /lib64/libc.so.6
+#1  0x00007ffff7a58d14 in atoi () from /lib64/libc.so.6
+#2  0x0000000000400637 in main (argc=1, argv=0x7fffffffdfa8) at q3a.c:17"
+
+ "up 2" takes you to q3a.c line 17. 
+   
+3. "print argv[1]" prints 0x0. Program segfaulted because it expects a pointer to a string but gets a null pointer instead (0x0).
+
+4. "r 5" the program asks if I want to start from the beginning. When I choose yes, and typed "c", it prints "-1840 [Inferior 1 (process 1065450) exited normally]"
+
+5. "print argv[0]" gives 0x7fffffffe24e "/home/guaa2020/clab/q3a"
+    "print argv[0] @argc" prints "{0x7fffffffe24e "/home/guaa2020/clab/q3a", 0x7fffffffe266 "5"}"
+    The value of argc is 2
+    The elements of argv are 0x7fffffffe24e "/home/guaa2020/clab/q3a" and 0x7fffffffe266 "5". The elements in argv are the path to your file and the argument you pass when you run the program.
+
+6. "s" takes you to "loop_while (a=5, b=16) at q3a.c:5
+5           int i = 0;"
+
+7. "list" gives :
+
+ #include <stdio.h>
+2
+3       int loop_while(int a, int b)
+4       {
+5           int i = 0;
+6           int result = 0;
+7           while (i < 256) {
+8               result += a;
+9               a -= b;
+10              i += b;
+
+When you hit the return key, you go the line that comes after what was printed by "list"
+
+8. The return key takes you through the execution of the program line by line as you hit it.
+
+9. result = 5, a = 5, b = 16
+
+                                            PART B
+
+
+1. We did not need to use a print command to find the value of a_size, as gdb tells us what a_size equals to in the breakpoint 1 line: 
+"Breakpoint 1, fix_array (a=0x6022a0, a_size=10) at q3b.c:17
+17          for (i = 0;  i < a_size;  i++, a++)"
+
+2. The value of a is a=0x6022a0
+
+3. The value of a after the return is a = (int *) 0x6022a0
+
+4. The value of a after stepping a seventh time is a = (int *) 0x6022a4. The value of i is 1.
+
+5. After stepping over (typing "n"), we wind up at line 17:
+"for (i = 0;  i < a_size;  i++, a++)"
+
+6. After stepping over again (typing "n"), we wind up at line 18, verifying that step over works just like next when we are not at a 
+function call. a is now a = (int *) 0x6022a8
+
+7. When we type p *a, we get 1.
+
+8. After typing "next 12," we are at line 18. 
+
+9. The value of a is now a = (int *) 0x6022c0.
+
+10. The value of *a is now *a = 21.
+
+
+

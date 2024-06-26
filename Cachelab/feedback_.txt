@@ -1,0 +1,5 @@
+1. We both took around 6 hours to complete the cache lab assignment. 
+
+2. It was a practical exercise that helped us understand cache systems and 
+    their impact on program performance, and it encouraged us to think 
+    critically about cache design and optimization.

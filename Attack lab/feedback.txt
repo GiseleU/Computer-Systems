@@ -1,0 +1,2 @@
+We all spent around 6 hours on the assignment.
+Some of the instructions (objdump command to get byte codes of gadgets) were not clear but the TAs helped us figure it out.

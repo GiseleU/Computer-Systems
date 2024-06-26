@@ -1,0 +1,15 @@
+Len: 2, Answer: 3, Cache hits: 0.750000, Cache misses: 0.250000
+Len: 4, Answer: 38, Cache hits: 0.875000, Cache misses: 0.125000
+Len: 8, Answer: 364, Cache hits: 0.937500, Cache misses: 0.062500
+Len: 16, Answer: 3160, Cache hits: 0.968750, Cache misses: 0.031250
+Len: 32, Answer: 26288, Cache hits: 0.968750, Cache misses: 0.031250
+Len: 64, Answer: 214368, Cache hits: 0.976562, Cache misses: 0.023438
+Len: 128, Answer: 1731264, Cache hits: 0.980469, Cache misses: 0.019531
+Len: 256, Answer: 5719424, Cache hits: 0.982422, Cache misses: 0.017578
+Len: 512, Answer: 12603136, Cache hits: 0.983398, Cache misses: 0.016602
+Len: 1024, Answer: 35103232, Cache hits: 0.983887, Cache misses: 0.016113
+Len: 2048, Answer: 151734272, Cache hits: 0.984131, Cache misses: 0.015869
+Len: 4096, Answer: 965121024, Cache hits: 0.984253, Cache misses: 0.015747
+Len: 8192, Answer: 7261203456, Cache hits: 0.984314, Cache misses: 0.015686
+Len: 16384, Answer: 3664241908736, Cache hits: 0.000031, Cache misses: 0.999969
+Len: 32768, Answer: 29319236337664, Cache hits: 0.000000, Cache misses: 1.000000

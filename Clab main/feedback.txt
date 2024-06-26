@@ -1,0 +1,7 @@
+Authors: Hannah Guo and Gisele Umutoni
+
+1. How long did each of you spend on this assignment?
+Between 9 and 10 hours (working together).
+
+2. Any comments on this assignment?
+It was really hard. We learned a lot and got to work with pointers and think about them in new ways, but it was a struggle.

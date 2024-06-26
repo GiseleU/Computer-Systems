@@ -1,0 +1,20 @@
+Authors: Hannah Guo and Gisele Umutoni
+
+1.  When you type "print puzzle1" in gdb, it prints "$1 = 1078530011".
+
+    When you type "p/x puzzle1", it prints "$2 = 0x40490fdb".
+
+
+2. "x/4bx &puzzle1" prints "0xdb    0x0f    0x49    0x40". This looks like a permutation of what's printed by "p/x puzzle1" (arranging the last two characters with the first two from last to first?)
+
+3. "x/fi &puzzle1" prints "3.14159274" (pi).
+
+4. "x/fg &puzzle2" prints 47.474747474747
+
+5.  "x/fs &puzzle3" prints "So far so good..."
+   
+
+
+
+
+

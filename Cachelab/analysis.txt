@@ -1,0 +1,20 @@
+1. The cache consists of 256-byte cache lines, each capable of storing 64 four-byte integers. 
+   Initially, with an empty cache, we incur at least one cache miss for the first access. However, after the initial miss, 
+   all four integers from both vectors fit within a single cache line.
+   This results in a cache miss rate of 25% (1 miss out of 4 total accesses), yielding a cache hit rate of 75%.
+
+2. As the length of the vectors increases, the cache hit rate improves until it reaches a point of diminishing returns.  
+    When the combined length of both vectors is 64 or less, we experience one cache miss, resulting in a cache miss rate that 
+    decreases as vector length increases. With an increasing number of accesses corresponding to longer vectors, the cache 
+    miss rate decreases due to the progressively longer lengths. This trend leads to an inversely related improvement in 
+    the cache hit rate, as there are only two cache states: hit or miss.
+
+3. The cache hit rate improves as vector lengths increase, up to a point where each vector has a length of 32, resulting in a 
+    hit rate of 98.4314%. However, for very large vectors exceeding this limit, the cache hit rate drops 
+    significantly due to cache capacity constraints. When a single vector's length reaches 16,384, 
+    the cache rate becomes 0.0031 since it cannot accommodate both vectors, causing a substantial drop in performance as data retrieval 
+    extends down to main memory.
+
+4. To optimize the cache configuration for large vectors with lengths exceeding 8192, one approach is to divide them into 
+    8192-chunk segments that can comfortably fit within the cache block. This segmentation enables the cache to maintain a 
+    high hit rate of 98.4314% for each 8192-chunk, improving overall performance.
